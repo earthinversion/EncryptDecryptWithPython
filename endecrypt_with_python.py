@@ -16,7 +16,7 @@ def Encrypt(filename, key, pref):
     data = bytearray(data)
     for kk in key:
         kk = ord(kk)
-        for index, value in enumerate (data):
+        for index, value in enumerate(data):
             data[index] = value ^ kk
 
     file = open (pref + "-" + filename, "wb")
@@ -31,7 +31,7 @@ def Decrypt(filename, key, pref):
     data = bytearray(data)
     for kk in key:
         kk = ord(kk)
-        for index, value in enumerate (data):
+        for index, value in enumerate(data):
             data[index] = value ^ kk
     
     defilename = filename.split("-")[-1] #remove the encryption prefix
